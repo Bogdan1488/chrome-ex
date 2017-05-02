@@ -1,0 +1,22 @@
+{
+  "name": "Bridge App",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "./sys/icon_16.png",
+    "128": "./sys/icon_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com.ua/*"],
+      "js": ["./src/content/script.js"]
+    }
+  ],
+  "browser_action": {
+    "name": "Click to get URL"
+  },
+  "background": {
+    "scripts": ["./src/background/background.js"]
+  },
+  "permissions": ["activeTab", "tabs", "notifications"]
+}
